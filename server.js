@@ -1,6 +1,6 @@
 var express = require('express');
 var path = require('path');
-var CatApi = require('./api/cat_api')
+var CatApi = require('./api/cat_api').CatApi;
 
 var app = express();
 

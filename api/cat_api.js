@@ -1,13 +1,13 @@
-var CatApi = function(app) {
+var cats = [{
+  name: "Jolly",
+  breed: "Moggy"
+},
+{
+  name: "Garfield",
+  breed: "Orange"
+}];
 
-  var cats = [{
-    name: "Jolly",
-    breed: "Moggy"
-  },
-  {
-    name: "Garfield",
-    breed: "Orange"
-  }];
+var CatApi = function(app) {
 
   app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/client/build/index.html'));
@@ -19,4 +19,7 @@ var CatApi = function(app) {
 
 }
 
-module.exports = CatApi;
+module.exports = {
+  CatApi: CatApi,
+  cats: cats
+}
