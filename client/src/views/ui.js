@@ -1,7 +1,10 @@
-var cats = require('../../../api/cat_api').cats;
+var Cats = require('../models/cats');
 
 var UI = function() {
-  this.render(cats);
+  var cats = new Cats();
+  cats.all(function(results) {
+    this.render(results);
+  }.bind(this));
 }
 
 UI.prototype.createText = function(text, label) {
