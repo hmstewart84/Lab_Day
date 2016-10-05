@@ -1,8 +1,9 @@
 var express = require('express');
-var path = require('path');
-var CatApi = require('./api/cat_api').CatApi;
-
 var app = express();
+var path = require('path');
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
+var CatApi = require('./api/cat_api').CatApi;
 
 app.use(express.static('client/build'));
 

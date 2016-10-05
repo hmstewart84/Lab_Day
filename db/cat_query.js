@@ -15,5 +15,18 @@ CatQuery.prototype.getAll = function(onQueryFinished) {
   });
 }
 
+CatQuery.prototype.createCat = function(cat, onQueryFinished) {
+  MongoClient.connect(this.url, function(err, db) {
+    if(db) {
+      var collection = db.collection('cats');
+      console.log(cat);
+      collection.insertOne(cat, function(err, result) {
+        console.log("Inserted cat!");
+        onQueryFinished();
+      });
+    }
+  });
+}
+
 
 module.exports = CatQuery;

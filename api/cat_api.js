@@ -23,6 +23,14 @@ var CatApi = function(app) {
     });
   });
 
+  app.post('/api/cats', function(req, res) {
+    query.createCat(req.body.cat, function() {
+      query.getAll(function(data) {
+        res.json(data);
+      });
+    });
+  });
+
 }
 
 module.exports = {
