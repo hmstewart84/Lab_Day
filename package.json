@@ -1,0 +1,23 @@
+{
+  "name": "lab_day",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hmstewart84/Lab_Day.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hmstewart84/Lab_Day/issues"
+  },
+  "homepage": "https://github.com/hmstewart84/Lab_Day#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
