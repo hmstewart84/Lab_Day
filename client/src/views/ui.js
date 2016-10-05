@@ -24,7 +24,6 @@ UI.prototype.render = function(cats) {
     this.appendText(li, cat.breed, ", Breed:");
     container.appendChild(li);
   }
-
 }
 
 module.exports = UI;
